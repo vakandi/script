@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo gshred -n 17 -z -u -v $*

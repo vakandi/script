@@ -1,0 +1,7 @@
+#!/bin/sh
+rm ~/msf/temp/*.exe
+echo "All .exe removed"
+rm ~/msf/temp/.temp_ip_ngrok-tcp.txt
+echo "temporary ngrok ip text removedd"
+rm ~/msf/temp/link-reverse*
+echo "txt link file for payload uploading have been removedd"

